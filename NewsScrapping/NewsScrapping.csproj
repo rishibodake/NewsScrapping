@@ -54,6 +54,7 @@
   <ItemGroup>
     <Compile Include="AccessWeb.cs" />
     <Compile Include="DataScapper.cs" />
+    <Compile Include="MostOccuredWord.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
