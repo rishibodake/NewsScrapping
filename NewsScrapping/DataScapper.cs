@@ -50,9 +50,33 @@ namespace NewsScrapping
             newsHeadings = driver.FindElements(By.ClassName("storylink"));
             foreach (var index in newsHeadings)
             {
-                one = one + index;
+                one = one + index.Text;
             }
             Console.WriteLine(one);
+            string[] spited = one.Split(' ');
+            Array.Sort(spited);
+            int max = 0;
+            int count = 0;
+            string word = spited[0];
+            string curr = spited[0];
+            for (int i = 1; i < spited.Length; i++)
+            {
+                if (spited[i].Equals(curr))
+                {
+                    count++;
+                }
+                else
+                {
+                    count = 1;
+                    curr = spited[i];
+                }
+                if (max < count)
+                {
+                    max = count;
+                    word = spited[i];
+                }
+            }
+            Console.WriteLine(word + " occured maximum in all news for" + max + " times");
         }
 
     }

@@ -16,6 +16,8 @@ namespace NewsScrapping
             scapper.ScrapTheNeededData();
             scapper.SortTheDataPointWise();
 
+            scapper.MostOccuredWord();
+
         }
     }
 }
