@@ -6,6 +6,8 @@
         {
             AccessWeb web = new AccessWeb();
             web.OpenLink();
+            web.ScrapTheNeededData();
+            web.SortTheDataPointWise();
         }
     }
 }
