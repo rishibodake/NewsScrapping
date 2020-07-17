@@ -10,12 +10,13 @@ namespace NewsScrapping
         IWebDriver driver;
         public IList<IWebElement> newsHeadings;
         string combined = "";
+        public string mostOccuredWordInNews;
         public MostOccuredWord(IWebDriver driver)
         {
             this.driver = driver;
         }
 
-        public void MostOccuredWords()
+        public string MostOccuredWords()
         {
             newsHeadings = driver.FindElements(By.ClassName("storylink"));
             foreach (var index in newsHeadings)
@@ -47,6 +48,8 @@ namespace NewsScrapping
                 }
             }
             Console.WriteLine("'"+word+"'" + " is most occured in all news for " + max + " times");
+            mostOccuredWordInNews = word;
+            return word;
         }
     }
 }

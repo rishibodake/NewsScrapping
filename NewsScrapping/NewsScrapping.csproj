@@ -52,10 +52,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AccessWeb.cs" />
-    <Compile Include="DataScapper.cs" />
-    <Compile Include="MostOccuredWord.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="WebAccess\AccessWeb.cs" />
+    <Compile Include="Scrapper\DataScapper.cs" />
+    <Compile Include="Occurence\MostOccuredWord.cs" />
+    <Compile Include="EntryPoint\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

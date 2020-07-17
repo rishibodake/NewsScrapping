@@ -7,7 +7,7 @@ namespace NewsScrapping
     {
         static void Main(string[] args)
         {
-            IWebDriver driver = new ChromeDriver();
+           /* IWebDriver driver = new ChromeDriver();
             AccessWeb web = new AccessWeb(driver);
             DataScapper scapper = new DataScapper(driver);
             MostOccuredWord finder = new MostOccuredWord(driver);
@@ -17,7 +17,7 @@ namespace NewsScrapping
             scapper.ScrapTheNeededData();
             scapper.SortTheDataPointWise();
             finder.MostOccuredWords();
-
+           */
             
 
         }

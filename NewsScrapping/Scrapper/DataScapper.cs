@@ -11,7 +11,6 @@ namespace NewsScrapping
         public Dictionary<int, string> mapForNews;
         public IList<IWebElement> newsHeadings;
         public IList<IWebElement> newsPonts;
-        string one = "";
         public DataScapper(IWebDriver driver)
         {
             this.driver = driver;
