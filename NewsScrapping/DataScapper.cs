@@ -8,9 +8,9 @@ namespace NewsScrapping
     public class DataScapper
     {
         IWebDriver driver;
-        Dictionary<int, string> mapForNews;
-        IList<IWebElement> newsHeadings;
-        IList<IWebElement> newsPonts;
+        public Dictionary<int, string> mapForNews;
+        public IList<IWebElement> newsHeadings;
+        public IList<IWebElement> newsPonts;
         public DataScapper(IWebDriver driver)
         {
             this.driver = driver;
@@ -25,6 +25,8 @@ namespace NewsScrapping
             for (int i = 0; i < newsHeadings.Count; i++)
             {
                 mapForNews[Int16.Parse(newsPonts[i].Text.Split(' ')[0])] = newsHeadings[i].Text;
+                           //Removing points and converting                 News Heading
+                            //into int    KEY                                Values   
             }
         }
 
@@ -41,5 +43,6 @@ namespace NewsScrapping
             Console.WriteLine(arrayOfPoints[arrayOfPoints.Length - 1]);
             Console.WriteLine(mapForNews[arrayOfPoints[arrayOfPoints.Length - 1]]);
         }
+
     }
 }
