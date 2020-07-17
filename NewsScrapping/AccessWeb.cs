@@ -7,10 +7,16 @@ namespace NewsScrapping
 {
     public class AccessWeb
     {
-        IWebDriver driver = new ChromeDriver();
+        IWebDriver driver;
         Dictionary<int, string> mapForNews;
         IList<IWebElement> newsHeadings;
         IList<IWebElement> newsPonts;
+
+        public AccessWeb(IWebDriver driver)
+        {
+            this.driver = driver;
+        }
+
         public void OpenLink()
         {
             driver.Url = "https://news.ycombinator.com/";

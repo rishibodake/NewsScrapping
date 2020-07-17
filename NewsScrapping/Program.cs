@@ -1,10 +1,15 @@
-﻿namespace NewsScrapping
+﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
+
+namespace NewsScrapping
 {
     class Program
     {
         static void Main(string[] args)
         {
-            AccessWeb web = new AccessWeb();
+            IWebDriver driver = new ChromeDriver();
+            AccessWeb web = new AccessWeb(driver);
+
             web.OpenLink();
             web.ScrapTheNeededData();
             web.SortTheDataPointWise();
