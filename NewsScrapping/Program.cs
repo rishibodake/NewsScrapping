@@ -9,10 +9,13 @@ namespace NewsScrapping
         {
             IWebDriver driver = new ChromeDriver();
             AccessWeb web = new AccessWeb(driver);
+            DataScapper scapper = new DataScapper(driver);
 
             web.OpenLink();
-            web.ScrapTheNeededData();
-            web.SortTheDataPointWise();
+            scapper.ScrapTheNeededData();
+            scapper.SortTheDataPointWise();
+           
+
         }
     }
 }
